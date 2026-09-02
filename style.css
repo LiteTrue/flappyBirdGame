@@ -1,0 +1,14 @@
+body {
+  background-color: rgb(210, 255, 253); /* or any color you want outside the canvas */
+  margin: 0; /* optional, removes default margin */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* center canvas vertically and horizontally */
+}
+
+canvas {
+  border: 5px solid black; /* black box border */
+  background-color: #87CEEB; /* sky blue background INSIDE the canvas */
+  display: block; /* remove inline gap */
+}
