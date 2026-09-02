@@ -1,5 +1,5 @@
 body {
-  background-color: rgb(37, 150, 190); /* or any color you want outside the canvas */
+  background-color: rgb(30, 30, 30); /* or any color you want outside the canvas */
   margin: 0; /* optional, removes default margin */
   display: flex;
   justify-content: center;
