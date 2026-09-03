@@ -125,11 +125,21 @@ function updatePipes() {
         // Move pipe
         pipe.x -= 1;
 
-        // Collision detection
+        // Collision detection (intentionally smaller hitbox)
+        const padX = 6; // Shrinks left and right edges
+        const padY = 4; // Shrinks top and bottom edges
+
+        const birdBox = {
+            x: bird.x + padX,
+            y: bird.y + padY,
+            width: bird.width - (padX * 2),
+            height: bird.height - (padY * 2)
+        };
+
         if (
-            bird.x < pipe.x + PIPE_WIDTH &&
-            bird.x + bird.width > pipe.x &&
-            (bird.y < pipe.y || bird.y + bird.height > pipe.y + PIPE_GAP)
+            birdBox.x < pipe.x + PIPE_WIDTH &&
+            birdBox.x + birdBox.width > pipe.x &&
+            (birdBox.y < pipe.y || birdBox.y + birdBox.height > pipe.y + PIPE_GAP)
         ) {
             gameOver = true;
         }
